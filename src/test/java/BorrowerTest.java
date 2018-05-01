@@ -13,7 +13,7 @@ public class BorrowerTest {
     public void before() {
         testBorrower = new Borrower();
         testLibrary = new Library();
-        testBook = new Book();
+        testBook = new Book("A Book", "Paper");
         testLibrary.addBook(testBook);
         testLibrary.addBook(testBook);
         testLibrary.addBook(testBook);
@@ -26,7 +26,7 @@ public class BorrowerTest {
     }
 
     @Test
-    public void canTakeBookFromLibrary() {
+    public void canBorrowBookFromLibrary() {
         testBorrower.borrowBookFromLibrary(testLibrary, 1);
         assertEquals(1, testBorrower.bookCount());
         assertEquals(3, testLibrary.bookCount());

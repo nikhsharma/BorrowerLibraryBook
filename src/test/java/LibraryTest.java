@@ -11,7 +11,7 @@ public class LibraryTest {
     @Before
     public void before() {
         testLibrary = new Library();
-        book = new Book();
+        book = new Book("A Book", "Paper");
     }
 
     @Test
