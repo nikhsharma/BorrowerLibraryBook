@@ -13,13 +13,13 @@ public class Library {
         return this.bookCollection.size();
     }
 
+    private boolean checkCapacity() {
+        return this.bookCollection.size() < this.capacity;
+    }
+
     public void addBook(Book book) {
         if (checkCapacity()) {
             this.bookCollection.add(book);
         }
-    }
-
-    public boolean checkCapacity() {
-        return this.bookCollection.size() < this.capacity;
     }
 }
