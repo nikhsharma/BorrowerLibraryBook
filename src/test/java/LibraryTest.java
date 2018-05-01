@@ -17,5 +17,12 @@ public class LibraryTest {
     @Test
     public void bookCountIsZero() {
         assertEquals(0, testLibrary.bookCount());
-}
+    }
+
+    @Test
+    public void canAddBookToCollection() {
+        testLibrary.addBook(book);
+        assertEquals(1, testLibrary.bookCount());
+    }
+
 }

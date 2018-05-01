@@ -1,13 +1,17 @@
 import java.util.ArrayList;
 
 public class Library {
-    private ArrayList<Book> books;
+    private ArrayList<Book> bookCollection;
 
     public Library() {
-        books = new ArrayList<>();
+        bookCollection = new ArrayList<>();
     }
 
     public int bookCount() {
-        return books.size();
+        return bookCollection.size();
+    }
+
+    public void addBook(Book book) {
+        bookCollection.add(book);
     }
 }
